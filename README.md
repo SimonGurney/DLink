@@ -1,12 +1,15 @@
-This is a fork of botamochi/Dlink, lots of kudos for the research into the digimon dlink protocol.
+This is a fork of botamochi/Dlink, lots of kudos for the research into the digimon dlink protocol.  Also see their blog here: [https://botamochi.github.io/articles/analysis/dlink.html]
 
-Also see their blog here: [https://botamochi.github.io/articles/analysis/dlink.html]
+It is a tweaked, fully working digimon battle program for arduino so you can have a battle with an original v-pet.  The sandbag code guarantees victory to the v-pet.
+
 
 The original readme is below, but the author chose to use an Arduino UNO which operates at 5v and therefore needed complicated level shifting circuitry.  It is much easier to use a 3v device, in my case I used a Circuit Playground Express as I had one lying around.  With a 3.3v GPIO, you can interact directly with the digimon virtual pet.  
 
 I built a small dock out of wood, nails and a hair bobble.  All you need is to get a reliable connection against the two pads on the v-pet.  
 
-The front pad is for i/o and the rear pad is for ground.  With your arduino, connect the digitalPin of your choice (change the GPIO in the code) to the front pad and connect your GND to the v-pets rear pad. 
+The front pad is for i/o and the rear pad is for ground.  With your arduino, connect the digitalPin of your choice (change the GPIO in the code) to the front pad and connect your GND to the v-pets rear pad.  See janky diagram below.
+
+![Janky Diagram](/examples/crude_schematic.png "Janky Diagram")
 
 Once connected, use the Arduino IDE to flash the sandbag code.  Sandbag appears to be some sort of Digimon reference.  
 
